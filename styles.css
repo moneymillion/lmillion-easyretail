@@ -1,0 +1,203 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.title {
+    color: #58A6FF;
+    font-size: 0.5em; /* Match this with the original title size */
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-column {
+    background-color: #080F1A; /* Dark blue background */
+    flex-basis: 50%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+   color: #58A6FF;
+   font-size: 1em; /* Match this with the original title size */
+   font-weight: bold;
+   margin-bottom: 1em;
+}
+
+.rotating-text-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.rotating-text {
+    font-size: 1.5em;
+}
+
+.right-column {
+    background-color: #000; /* Black background */
+    flex-basis: 50%;
+    display: flex;
+    justify-content: space-between; /* Distribute space between content */
+    padding: 2em;
+    flex-direction: column; /* Organize children in a column */
+}
+
+
+/* Adjust the right-content class to center everything except the footer */
+.right-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    flex-grow: 1;
+}
+
+.get-started {
+    color: #fff;
+    font-size: 1.5em; /* Match this with the 'Get started' text size */
+    margin-bottom: 20px;
+}
+
+.get-starteddetails {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 1.0em;
+}
+
+/* Standardize the border-radius for all buttons */
+.button {
+    border-radius: 20px; /* Match this with the original buttons' border-radius */
+}
+
+.action-buttons {
+    display: flex; /* Align buttons side by side */
+}
+
+/* Ensure consistency in button appearance */
+.action-button {
+    background-color: #3C46FF; /* Blue background for buttons */
+    color: #fff;
+    border: none;
+    padding: 12px 24px; /* Adjust padding to match the original */
+    margin: 0 10px;
+    border-radius: 20px; /* Standardize border-radius */
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    box-shadow: none; /* Remove any box-shadow if present */
+}
+
+.action-button:hover {
+    background-color: #575ECC;
+}
+
+.footer {
+    text-align: center;
+    width: 100%;
+    font-size: 0.8rem;
+    position: static; /* Or you can remove 'position' if it was not set to 'absolute' before */
+}
+
+.footer a {
+    color: #4e9af1; /* Bright blue links for contrast */
+    text-decoration: none;
+    margin: 0 5px;
+    position: static; /* Or you can remove 'position' if it was not set to 'absolute' before */
+
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* ... existing desktop styles ... */
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+    html, body {
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            overflow-y: auto; /* Allow vertical scrolling if needed */
+        }
+
+    .container {
+        flex-direction: column;
+        justify-content: flex-start; /* Align content to the top */
+        height: 100%; /* Allow container to grow with content */
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+        align-items: center; /* Center align items */
+        justify-content: center; /* Center content */
+        box-sizing: border-box; /* Include padding in width */
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /* Adjust left column for the title and rotating text */
+      .left-column {
+          order: 2; /* Put the left column at the bottom */
+          align-items: center; /* Center items horizontally */
+          display: flex;
+
+      }
+
+
+            .logo {
+                font-size: 1.5em; /* Increase the size of the logo if needed */
+                text-align: center; /* Center the logo text */
+                width: 100%; /* Ensure the logo uses full width */
+            }
+
+            .rotating-text {
+                /* ... other rotating-text styles ... */
+                text-align: center; /* Center the rotating text */
+                width: 100%; /* Let the text determine the width */
+                font-size: 1em; /* Adjust rotating text font size if necessary */
+            padding-bottom: 6.5em;
+            }
+
+
+            .action-buttons {
+                flex-direction: column; /* Stack buttons vertically */
+                width: 100%; /* Full width */
+                align-items: center; /* Center buttons horizontally */
+                justify-content: center; /* Center buttons vertically */
+            }
+
+      .action-button {
+          /* Increase the size of the buttons */
+          font-size: 1rem; /* Adjust font size as needed */
+          margin: 0.5rem 0; /* Margin for spacing */
+          min-width: 80%; /* Minimum width to fit text */
+
+      }
+
+      /* Adjust footer position */
+      .footer {
+          position: absolute; /* Keep footer at the bottom */
+          bottom: 0.1rem; /* Adjust distance from the bottom */
+          left: 0;
+          background-color:080F1A;
+          width: 100%; /* Full width */
+          text-align: center; /* Center text */
+          padding-top: 1em;
+          padding-bottom:0.4em;
+      }
+  }
+
+
+/* ... existing desktop styles ... */
